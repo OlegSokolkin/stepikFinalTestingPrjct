@@ -20,7 +20,7 @@ def test_guest_can_go_to_login_page(browser):
     page.go_to_login_page()          # выполняем метод страницы — переходим на страницу логина
     #link2 = browser.current_url
     
-    page = LoginPage(browser, link)
+    page = LoginPage(browser, link)  # в качестве альтернативы можно использовать browser.current_url
     page.should_be_login_form()
     page.should_be_register_form()
     page.should_be_login_url()
